@@ -9,4 +9,4 @@ Open a terminal and navigate to the directory where you have kept your python sc
 
 and hit enter.
 
-Just add this batch file to your system path variables and open the local git repo which you wish to use. Then type in the above command in the terminal of your choice (I use CMD).
+Just add this batch file to your system path variables. Then type in the above command in the terminal of your choice (I use CMD).
