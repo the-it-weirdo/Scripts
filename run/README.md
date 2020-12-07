@@ -8,6 +8,7 @@
  3. .bat
  4. .kt
  5. .jar
+ 6. .txt
 
 ## Usage
 ```run "path\to\file\filename.extension"```
@@ -25,12 +26,13 @@
 
 ```run D:\Folder\SomeAwesomeJAR.jar```
 
+```run D:\Folder\SomeAwesomeTextFile.txt```
+
 
 ## Note
 
  - ```run``` doesn't support wildcard characters in its argument yet.
  - Only **1** argument is required. This is the "path\to\file\filename.extension".
- - Input handling is not done yet. So, invalid inputs/no inputs might produce unexpected result.
 
 Just add this batch file to your system path variables. Then type in the above command in the terminal of your choice (I use CMD).
 
