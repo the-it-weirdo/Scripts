@@ -6,6 +6,8 @@
  1. .py
  2. .java
  3. .bat
+ 4. .kt
+ 5. .jar
 
 ## Usage
 ```run "path\to\file\filename.extension"```
@@ -18,6 +20,10 @@
 ```run D:\Folder\SomeAwesomeCode.py```
 
 ```run D:\Folder\SomeAwesomeScript.bat```
+
+```run D:\Folder\SomeAwesomeCode.kt```
+
+```run D:\Folder\SomeAwesomeJAR.jar```
 
 
 ## Note
