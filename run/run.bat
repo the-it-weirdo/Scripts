@@ -5,7 +5,8 @@ set BATCH_EXTENSION=.bat
 set JAVA_EXTENSION=.java
 set KOTLIN_EXTENSION=.kt
 set JAR_EXTENSION=.jar
-set SUPPORTED_FORMATS=%PYTHON_EXTENSION% %BATCH_EXTENSION% %JAVA_EXTENSION% %KOTLIN_EXTENSION% %JAR_EXTENSION%
+set TEXT_EXTENSION=.txt
+set SUPPORTED_FORMATS=%PYTHON_EXTENSION% %BATCH_EXTENSION% %JAVA_EXTENSION% %KOTLIN_EXTENSION% %JAR_EXTENSION% %TEXT_EXTENSION%
 
 if [%1] == [] (call :NO_PARAM && exit /b) else (call :VALIDATE_FORMATS %1 && exit /b)
 
@@ -30,6 +31,7 @@ if %_extension%==%JAVA_EXTENSION% (call :RUN_JAVA %1)
 if %_extension%==%BATCH_EXTENSION% (call :RUN_BAT %1)
 if %_extension%==%KOTLIN_EXTENSION% (call :RUN_KOTLIN %1)
 if %_extension%==%JAR_EXTENSION% (call :RUN_JAR %1)
+if %_extension%==%TEXT_EXTENSION% (call :RUN_TEXT %1)
 exit /b
 
 :UNSUPPORTED_FORMAT
@@ -57,4 +59,8 @@ exit /b
 
 :RUN_JAR
 java -jar %1
+exit /b
+
+:RUN_TEXT
+notepad %1
 exit /b
