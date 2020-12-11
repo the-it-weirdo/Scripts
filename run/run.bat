@@ -6,7 +6,8 @@ set JAVA_EXTENSION=.java
 set KOTLIN_EXTENSION=.kt
 set JAR_EXTENSION=.jar
 set TEXT_EXTENSION=.txt
-set SUPPORTED_FORMATS=%PYTHON_EXTENSION% %BATCH_EXTENSION% %JAVA_EXTENSION% %KOTLIN_EXTENSION% %JAR_EXTENSION% %TEXT_EXTENSION%
+set JS_EXTENSION=.js
+set SUPPORTED_FORMATS=%PYTHON_EXTENSION% %BATCH_EXTENSION% %JAVA_EXTENSION% %KOTLIN_EXTENSION% %JAR_EXTENSION% %TEXT_EXTENSION% %JS_EXTENSION%
 
 if [%1] == [] (call :NO_PARAM && exit /b) else (call :VALIDATE_FORMATS %1 && exit /b)
 
@@ -32,6 +33,7 @@ if %_extension%==%BATCH_EXTENSION% (call :RUN_BAT %1)
 if %_extension%==%KOTLIN_EXTENSION% (call :RUN_KOTLIN %1)
 if %_extension%==%JAR_EXTENSION% (call :RUN_JAR %1)
 if %_extension%==%TEXT_EXTENSION% (call :RUN_TEXT %1)
+if %_extension%==%JS_EXTENSION% (call :RUN_JS %1)
 exit /b
 
 :UNSUPPORTED_FORMAT
@@ -64,3 +66,7 @@ exit /b
 :RUN_TEXT
 notepad %1
 exit /b
+
+:RUN_JS
+node %1
+REM node auto executes ```exit \b```.

@@ -9,6 +9,7 @@
  4. .kt
  5. .jar
  6. .txt
+ 7. .js
 
 ## Usage
 ```run "path\to\file\filename.extension"```
@@ -27,6 +28,8 @@
 ```run D:\Folder\SomeAwesomeJAR.jar```
 
 ```run D:\Folder\SomeAwesomeTextFile.txt```
+
+```run D:\Folder\SomeAwesomeCode.js```
 
 
 ## Note
