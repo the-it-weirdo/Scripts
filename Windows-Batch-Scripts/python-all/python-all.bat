@@ -1,0 +1,1 @@
+forfiles /M *.py /C "cmd /C echo processing @path && python @path"
